@@ -2,4 +2,17 @@
 
 ## How to run:
 
-`npx cross-env API_SECRET={{ secrets.apiKey }} npm run start`
+1) create `local.settings.json` with
+
+```
+{
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "API_SECRET": "<your secret>"
+  },
+  "IsEncrypted": false
+}
+```
+
+2)  run `npm run start`
